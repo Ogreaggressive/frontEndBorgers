@@ -1,0 +1,66 @@
+<div *ngFor="let burger of burgers" class="card card-body mb-2">
+    <div class="row">
+      <div class="col-md-5">
+        <ul>
+          <li>
+            id: {{burger.id}}
+          </li>
+          <li>
+            nombre_hamburguesa: {{burger.nombre_hamburguesa}}
+          </li>
+          <li>
+            tipo_carne: {{burger.tipo_carne}}
+          </li>
+          <li>
+            carne: {{burger.carne}}
+          </li>
+          <li>
+            lechuga: {{burger.lechuga}}
+          </li>
+          <li>
+            cebolla: {{burger.cebolla}}
+          </li>
+          <li>
+            aros_cebolla: {{burger.aros_cebolla}}
+          </li>
+          <li>
+            tomate: {{burger.tomate}}
+          </li>
+          <li>
+            tocino: {{burger.tocino}}
+          </li>
+          <li>
+            huevo: {{burger.huevo}}
+          </li>
+          <li>
+            jamon: {{burger.jamon}}
+          </li>
+          <li>
+            jalapeno: {{burger.jalapeno}}
+          </li>
+          <li>
+            pepinillo: {{burger.pepinillo}}
+          </li>
+          <li>
+            queso_cheddar: {{burger.queso_cheddar}}
+          </li>
+          <li>
+            champinones: {{burger.champinones}}
+          </li>
+          <li>
+            nachos: {{burger.nachos}}
+          </li>
+          <li>
+            salsa: {{burger.salsa}}
+          </li>
+        </ul>
+        
+       <button (click)="deleteProduct(burger)" class="btn btn-danger">
+            Borrar
+          </button>
+        <button [routerLink]="['/burger/edit/', burger.id]" class="btn btn-secondary">
+            Editar
+          </button>
+      </div>
+    </div>
+</div>
